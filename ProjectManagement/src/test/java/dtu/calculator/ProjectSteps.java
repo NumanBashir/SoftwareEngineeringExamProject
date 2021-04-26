@@ -10,6 +10,7 @@ import dtu.program.app.ExampleEmployeeRepository;
 import dtu.program.app.Project;
 import dtu.program.app.ProjectManagementApp;
 import dtu.program.app.test;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -54,24 +55,24 @@ public class ProjectSteps {
 	    
 	}
 
-	@Given("a project with project number of {string} does exists")
+	@And("a project with project number of {string} does exists")
 	public void a_project_with_project_number_of_does_exists(String pro) {
 	    assertTrue(pma.containsProjectWithName(project));
 		
 	}
 
-	@Given("there is no project leader assigned to that project")
+	@And("there is no project leader assigned to that project")
 	public void there_is_no_project_leader_assigned_to_that_project() {
-	    assertThat(project, .not);
+	    
 	}
 
-	@Given("the employee is not a project leader for that project")
+	@And("the employee is not a project leader for that project")
 	public void the_employee_is_not_a_project_leader_for_that_project() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
 	}
 
-	@Given("the employee is not a project leader for any other project")
+	@And("the employee is not a project leader for any other project")
 	public void the_employee_is_not_a_project_leader_for_any_other_project() {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new io.cucumber.java.PendingException();
