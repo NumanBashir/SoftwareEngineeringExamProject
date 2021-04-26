@@ -1,6 +1,7 @@
 package dtu.program.app;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.function.BooleanSupplier;
 
 public class ProjectManagementApp {
@@ -9,6 +10,7 @@ public class ProjectManagementApp {
 	ExampleEmployeeRepository exampleDatabase;
 	ArrayList<String> employees = new ArrayList<String>();
 	ArrayList<String> projectList = new ArrayList<String>();
+	
 	 
 	public ProjectManagementApp(ExampleEmployeeRepository exampleDatabase) {
 		this.exampleDatabase = exampleDatabase;
@@ -24,13 +26,15 @@ public class ProjectManagementApp {
 		return null;
 	}
 
-	public void addEmployee(String employee) {
-		employees.add(employee);
+	public void addEmployee(Employee employee) {
+		employees.addAll((Collection<? extends String>) employee);
 		
 	}
 
 	public boolean containsProjectWithName(Project project) {
 		return projectList.contains(project);
 	}
+	
+	// Hejsa :)
 	
 }
