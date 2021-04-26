@@ -26,8 +26,8 @@ public class ProjectManagementApp {
 		return null;
 	}
 
-	public void addEmployee(Employee employee) {
-		employees.addAll((Collection<? extends String>) employee);
+	public void addEmployee(String employeeName) {
+		employees.addAll((Collection<? extends String>) employeeName);
 		
 	}
 
@@ -35,6 +35,5 @@ public class ProjectManagementApp {
 		return projectList.contains(project);
 	}
 	
-	// Hejsa :)
 	
 }
