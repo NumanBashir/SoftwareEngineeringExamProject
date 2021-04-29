@@ -5,5 +5,5 @@ Feature: Add an employee
 # Main Scenario
 Scenario: Add an employee succesfully
 	Given that there is an employee with name "LARS" 
-	When the employee is added to the app
+	When the employee "LARS" is added to the app
 	Then the employee with name "LARS" is contained in the app

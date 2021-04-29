@@ -27,7 +27,7 @@ public class ProjectManagementApp {
 	}
 
 	public void addEmployee(String employeeName) {
-		employees.addAll((Collection<? extends String>) employeeName);
+		employees.add(employeeName);
 		
 	}
 
