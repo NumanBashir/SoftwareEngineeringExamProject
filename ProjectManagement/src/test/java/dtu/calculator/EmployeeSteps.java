@@ -1,6 +1,8 @@
 package dtu.calculator;
 
 import static org.junit.Assert.assertThat;
+
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -11,11 +13,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
 public class EmployeeSteps {
 	
 	Employee employee;
 	ProjectManagementApp pma;
 	ErrorMessageHolder errorMessage;
+	
+	public EmployeeSteps(ProjectManagementApp pma) {
+		this.pma = pma;
+	}
 	
 	
 	@Given("that there is an employee with name {string}")
@@ -25,7 +32,7 @@ public class EmployeeSteps {
 
 	@When("the employee {string} is added to the app")
 	public void the_employee_is_added_to_the_app(String name) {
-		pma.addEmployee(name);
+		pma.addEmployee(employee);
 	}
 
 	@Then("the employee with name {string} is contained in the app")

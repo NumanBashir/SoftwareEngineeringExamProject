@@ -8,8 +8,11 @@ public class Employee {
 		this.name = name;
 		
 	}
-	// hej 
-	// Hej Nejo
+	
+	public Employee() {
+		
+	}
+	
 	public  String getUserName() {
 		return name;
 		
