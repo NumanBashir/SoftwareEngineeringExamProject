@@ -3,6 +3,7 @@ package dtu.program.app;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.BooleanSupplier;
+import dtu.program.app.Employee;
 
 public class ProjectManagementApp {
 
@@ -13,7 +14,14 @@ public class ProjectManagementApp {
 	Employee employee;
 	EmployeeRepository employeeRepository;
 	
-	 
+	//public ProjectManagementApp(EmployeeRepository employeeRepository) {
+	//	setRepositories(employeeRepository);
+	//}
+	
+	public ProjectManagementApp() {
+		
+	}
+
 	public ProjectManagementApp(ExampleEmployeeRepository exampleDatabase) {
 		this.exampleDatabase = exampleDatabase;
 		
