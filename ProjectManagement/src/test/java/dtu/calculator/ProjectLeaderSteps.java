@@ -1,19 +1,28 @@
 package dtu.calculator;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.junit.Assert.assertTrue;
 
 import dtu.program.app.Employee;
 import dtu.program.app.Project;
+import dtu.program.app.ProjectManagementApp;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ProjectLeaderSteps {
+	
 	Project project;
 	Employee user;
+	ProjectManagementApp pma;
+	ProjectHolder projectHolder;
+	
+	public ProjectLeaderSteps(ProjectManagementApp pma, ProjectHolder projectHolder) {
+		this.pma = pma;
+		this.projectHolder = projectHolder;
+		
+	}
 	
 	
 	@Given("that the user with the name {string}")
@@ -24,7 +33,7 @@ public class ProjectLeaderSteps {
 
 	@And("a project with project number of {string} does exists")
 	public void a_project_with_project_number_of_does_exists(String projectID) {
-	    assertThat(project.containsProject(projectID), is(equalTo(projectID)));
+		assertTrue(pma.containsProject(projectID));
 		
 	}
 

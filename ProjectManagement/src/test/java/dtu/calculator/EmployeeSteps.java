@@ -10,7 +10,6 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 import dtu.program.app.Employee;
 import dtu.program.app.ProjectManagementApp;
-import dtu.program.app.OperationNotAllowedException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -35,7 +34,6 @@ public class EmployeeSteps {
 	@When("the employee {string} is added to the app")
 	public void the_employee_is_added_to_the_app(String name) {
 		assertTrue(employee.getUserName().equals(name));
-		pma.addEmployee(employee);
 		
 	}
 

@@ -10,36 +10,54 @@ public class ProjectManagementApp {
 	//ProjectManagementApp har en database med Employee
 	ExampleEmployeeRepository exampleDatabase;
 	ArrayList<String> employees = new ArrayList<String>();
-	ArrayList<String> projectList = new ArrayList<String>();
+	ArrayList<Project> projectList = new ArrayList<Project>();
 	Employee employee;
-	EmployeeRepository employeeRepository;
-	
-	//public ProjectManagementApp(EmployeeRepository employeeRepository) {
-	//	setRepositories(employeeRepository);
-	//}
+	int løbenummer = -1;
 	
 
 	public ProjectManagementApp(ExampleEmployeeRepository exampleDatabase) {
 		this.exampleDatabase = exampleDatabase;
+		
 		
 	}
 
 	public boolean containsEmployeeWithName(String string) {
 		return employees.contains(string);
 	}
+	
+	
 
 	public Project createProjectByUser(String userName) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void addEmployee(Employee name) {
-		employeeRepository.addEmployee(name);
+		løbenummer++;
+		Project newProject = new Project(løbenummer);
+		projectList.add(newProject);
+		return newProject;
 		
 	}
 
-	public boolean containsProjectWithName(Project project) {
-		return projectList.contains(project);
+	public void addEmployee(String name) {
+		employees.add(name);
+		
+	}
+
+	//public boolean containsProjectWithName(Project project) {
+	//	return projectList.contains(project);
+	//}
+
+	public boolean containsProject(String projectID) {
+		System.out.println("projectId: "+ projectID);
+		for(int i = 0; i<projectList.size(); i++) {
+			System.out.println("projectId in list: "+ projectList.get(i).getProjectId());
+			if(projectID.equals(projectList.get(i).getProjectId())) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public Project getProject() {
+		return projectList.get(løbenummer);
+		
 	}
 	
 	
