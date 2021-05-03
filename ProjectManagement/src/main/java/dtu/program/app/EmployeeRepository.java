@@ -1,5 +1,14 @@
 package dtu.program.app;
 
-public class EmployeeRepository {
+import dtu.program.app.Employee;
+
+public interface EmployeeRepository {
+	void addEmployee(Employee employee);
+	
+	
+	
 
 }
+
+
+

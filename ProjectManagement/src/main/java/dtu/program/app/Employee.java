@@ -8,13 +8,12 @@ public class Employee {
 		this.name = name;
 		
 	}
-	// hej 
-	// Hej Nejo
+	
+
 	public  String getUserName() {
 		return name;
 		
 	}
-	
 	
 	
 }

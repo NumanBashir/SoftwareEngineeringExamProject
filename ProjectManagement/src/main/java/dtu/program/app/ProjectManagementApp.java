@@ -3,6 +3,7 @@ package dtu.program.app;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.function.BooleanSupplier;
+import dtu.program.app.Employee;
 
 public class ProjectManagementApp {
 
@@ -10,8 +11,14 @@ public class ProjectManagementApp {
 	ExampleEmployeeRepository exampleDatabase;
 	ArrayList<String> employees = new ArrayList<String>();
 	ArrayList<String> projectList = new ArrayList<String>();
+	Employee employee;
+	EmployeeRepository employeeRepository;
 	
-	 
+	//public ProjectManagementApp(EmployeeRepository employeeRepository) {
+	//	setRepositories(employeeRepository);
+	//}
+	
+
 	public ProjectManagementApp(ExampleEmployeeRepository exampleDatabase) {
 		this.exampleDatabase = exampleDatabase;
 		
@@ -26,8 +33,8 @@ public class ProjectManagementApp {
 		return null;
 	}
 
-	public void addEmployee(String employeeName) {
-		employees.add(employeeName);
+	public void addEmployee(Employee name) {
+		employeeRepository.addEmployee(name);
 		
 	}
 

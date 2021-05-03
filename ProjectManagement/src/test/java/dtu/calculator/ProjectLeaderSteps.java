@@ -16,8 +16,6 @@ public class ProjectLeaderSteps {
 	Employee user;
 	
 	
-	
-	
 	@Given("that the user with the name {string}")
 	public void that_the_user_with_the_name(String userName) {
 	    user = new Employee(userName);
