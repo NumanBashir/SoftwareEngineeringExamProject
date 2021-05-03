@@ -18,9 +18,6 @@ public class ProjectManagementApp {
 	//	setRepositories(employeeRepository);
 	//}
 	
-	public ProjectManagementApp() {
-		
-	}
 
 	public ProjectManagementApp(ExampleEmployeeRepository exampleDatabase) {
 		this.exampleDatabase = exampleDatabase;
