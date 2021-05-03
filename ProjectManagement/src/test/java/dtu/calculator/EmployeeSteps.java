@@ -21,6 +21,7 @@ public class EmployeeSteps {
 	ProjectManagementApp pma;
 	ErrorMessageHolder errorMessage;
 	int tal = 123;
+	int tal2 = 321;
 	
 	//Hej
 	public EmployeeSteps(ProjectManagementApp pma) {
