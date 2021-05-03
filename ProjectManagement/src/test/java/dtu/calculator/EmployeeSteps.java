@@ -1,6 +1,10 @@
 package dtu.calculator;
 
 import static org.junit.Assert.assertThat;
+
+
+import org.junit.runner.RunWith;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -11,12 +15,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+
 public class EmployeeSteps {
 	
 	Employee employee;
 	ProjectManagementApp pma;
 	ErrorMessageHolder errorMessage;
-	
 	
 	@Given("that there is an employee with name {string}")
 	public void that_there_is_an_employee_with_name(String name) {
