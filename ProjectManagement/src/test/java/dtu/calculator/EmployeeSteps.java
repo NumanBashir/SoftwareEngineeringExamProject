@@ -1,6 +1,7 @@
 package dtu.calculator;
 
 import static org.junit.Assert.assertThat;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.equalTo;
 
@@ -10,6 +11,7 @@ import dtu.program.app.OperationNotAllowedException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 
 public class EmployeeSteps {
 	
