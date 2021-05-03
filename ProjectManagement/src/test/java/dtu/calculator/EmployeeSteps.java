@@ -2,7 +2,6 @@ package dtu.calculator;
 
 import static org.junit.Assert.assertThat;
 
-
 import org.junit.runner.RunWith;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -22,6 +21,13 @@ public class EmployeeSteps {
 	ProjectManagementApp pma;
 	ErrorMessageHolder errorMessage;
 	
+	
+	public EmployeeSteps(ProjectManagementApp pma) {
+		this.pma = pma;
+	}
+	
+	
+	//Scenarios for employee
 	@Given("that there is an employee with name {string}")
 	public void that_there_is_an_employee_with_name(String name) {
 		employee = new Employee(name);
@@ -29,7 +35,7 @@ public class EmployeeSteps {
 
 	@When("the employee {string} is added to the app")
 	public void the_employee_is_added_to_the_app(String name) {
-		pma.addEmployee(name);
+		pma.addEmployee(employee);
 	}
 
 	@Then("the employee with name {string} is contained in the app")
