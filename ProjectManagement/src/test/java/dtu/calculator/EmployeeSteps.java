@@ -20,6 +20,7 @@ public class EmployeeSteps {
 	Employee employee;
 	ProjectManagementApp pma;
 	ErrorMessageHolder errorMessage;
+	int tal = 123;
 	
 	//Hej
 	public EmployeeSteps(ProjectManagementApp pma) {
