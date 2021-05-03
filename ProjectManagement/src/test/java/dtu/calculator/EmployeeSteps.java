@@ -26,7 +26,6 @@ public class EmployeeSteps {
 		this.pma = pma;
 	}
 	
-	
 	//Scenarios for employee
 	@Given("that there is an employee with name {string}")
 	public void that_there_is_an_employee_with_name(String name) {

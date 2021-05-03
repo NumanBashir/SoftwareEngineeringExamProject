@@ -10,11 +10,6 @@ public class Employee {
 	}
 	
 
-	public Employee() {
-		
-	}
-	
-
 	public  String getUserName() {
 		return name;
 		
