@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
 
+import dtu.program.app.Employee;
 import dtu.program.app.EmployeeRepository;
 import dtu.program.app.ExampleEmployeeRepository;
 import dtu.program.app.Project;
@@ -19,6 +20,7 @@ public class ProjectSteps {
 	ProjectManagementApp pma;
 	String userName;
 	Project project;
+	Employee employee;
 	
 	public ProjectSteps(ProjectManagementApp pma, Project project) {
 		this.pma = pma;
@@ -31,7 +33,7 @@ public class ProjectSteps {
 		userName = employeeName;
 		ExampleEmployeeRepository exampleDatabase = new ExampleEmployeeRepository();
 		pma = new ProjectManagementApp(exampleDatabase);
-		pma.addEmployee(employeeName);
+		pma.addEmployee(employee);
 		assertTrue(pma.containsEmployeeWithName(employeeName));
 	}
 	

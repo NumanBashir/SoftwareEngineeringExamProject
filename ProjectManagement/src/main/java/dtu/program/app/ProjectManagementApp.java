@@ -10,6 +10,8 @@ public class ProjectManagementApp {
 	ExampleEmployeeRepository exampleDatabase;
 	ArrayList<String> employees = new ArrayList<String>();
 	ArrayList<String> projectList = new ArrayList<String>();
+	Employee employee;
+	EmployeeRepository employeeRepository;
 	
 	 
 	public ProjectManagementApp(ExampleEmployeeRepository exampleDatabase) {
@@ -26,8 +28,8 @@ public class ProjectManagementApp {
 		return null;
 	}
 
-	public void addEmployee(String employeeName) {
-		employees.add(employeeName);
+	public void addEmployee(Employee name) {
+		employeeRepository.addEmployee(name);
 		
 	}
 
